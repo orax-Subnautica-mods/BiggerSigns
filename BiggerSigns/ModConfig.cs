@@ -14,7 +14,7 @@ namespace BiggerSigns
         [Slider("Scale min", -5, 0, DefaultValue = SCALE_MIN)]
         public int ScaleMin = SCALE_MIN;
 
-        [Slider("Scale max", 0, 20, DefaultValue = SCALE_MAX)]
+        [Slider("Scale max", 0, 100)]
         public int ScaleMax = SCALE_MAX;
 
         [Slider("Scale step", 0.0001f, 0.0009f, DefaultValue = SCALE_STEP, Format = "{0:F4}", Step = 0.0001f)]
