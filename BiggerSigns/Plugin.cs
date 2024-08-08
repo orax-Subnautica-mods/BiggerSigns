@@ -24,5 +24,13 @@ namespace BiggerSigns
             Harmony.CreateAndPatchAll(Assembly, $"{PluginInfo.PLUGIN_GUID}");
             Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
+
+        private void OnEnable()
+        {
+            if (ModConfig.FreeRecipe)
+            {
+                CraftData.techData[TechType.Sign]._ingredients = new CraftData.Ingredients();
+            }
+        }
     }
 }
